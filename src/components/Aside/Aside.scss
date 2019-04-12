@@ -1,0 +1,65 @@
+@import '../../utils/Variables.scss';
+.aside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30rem;
+  height: 100vh;
+  color: white;
+  z-index: 9999;
+  overflow-y: scroll;
+  transform: translate(-30rem, 0);
+  transition: all 0.5s ease;
+  background-color: $color-gray;
+  border-right: 1px solid $color-gray-dark;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  & > * {
+    visibility: hidden;
+  }
+
+  &.visible {
+    transform: translate(0, 0);
+    & > * {
+      visibility: visible;
+    }
+  }
+
+  &-title {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  &-input {
+    padding: 2rem 1rem;
+    input {
+      padding: 0 2rem;
+      height: 4rem;
+      border-radius: 10rem;
+      border: none;
+    }
+  }
+
+  &-location {
+    padding: 2.3rem 1.5rem;
+    cursor: pointer;
+    &:hover {
+      background-color: darken($color-gray, 3%);
+    }
+  }
+
+  &-input,
+  &-location {
+    border-bottom: 1px solid $color-gray-dark;
+  }
+
+  &-input,
+  &-input input,
+  &-location,
+  &-title {
+    font-size: 2rem;
+    width: 100%;
+  }
+}

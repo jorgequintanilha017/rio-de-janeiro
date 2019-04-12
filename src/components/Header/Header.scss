@@ -1,0 +1,34 @@
+@import '../../utils/Variables.scss';
+.header {
+  width: 100%;
+  padding: 1.5rem 0;
+  background-color: $color-gray;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+
+  &__burger {
+    width: 3rem;
+    cursor: pointer;
+    margin-left: 2rem;
+
+    & > *:not(:last-child) {
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  &__title {
+    color: white;
+    flex-grow: 1;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+  }
+}
+
+.bar {
+  width: 100%;
+  height: 0.5rem;
+  background-color: $color-green;
+  border-radius: 0.5rem;
+}

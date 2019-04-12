@@ -1,0 +1,23 @@
+@import '../../utils/Variables.scss';
+
+.loading {
+  background-color: $color-gray-dark;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 1s ease;
+  font-size: 2rem;
+  h1 {
+    font-family: 'Playfair Display', serif;
+  }
+  h1,
+  h3 {
+    width: 100%;
+    text-align: center;
+    font-weight: normal;
+    color: white;
+  }
+}
